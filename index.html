@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Portfolio</title>
   <link rel="stylesheet" href="style.css">
+  <script src="script.js"></script>
 </head>
 
 <body>
@@ -41,24 +42,44 @@
         <div class="skill-category">
           <h3>Development</h3>
           <div class="skill-item">
-            <span class="skill-name">HTML5</span>
-            <span class="stars">★★★★★</span>
+            <div class="skill-meta">
+              <span class="skill-name">HTML5</span>
+            </div>
+            <div class="progress-bar">
+              <div class="progress-inner" data-level="100%"></div>
+            </div>
           </div>
           <div class="skill-item">
-            <span class="skill-name">CSS3</span>
-            <span class="stars">★★★★★</span>
+            <div class="skill-meta">
+              <span class="skill-name">CSS3</span>
+            </div>
+            <div class="progress-bar">
+              <div class="progress-inner" data-level="100%"></div>
+            </div>
           </div>
           <div class="skill-item">
-            <span class="skill-name">Sass(SCSS)</span>
-            <span class="stars">★★★★<span class="stars-empty">☆</span></span>
+            <div class="skill-meta">
+              <span class="skill-name">Sass(SCSS)</span>
+            </div>
+            <div class="progress-bar">
+              <div class="progress-inner" data-level="80%"></div>
+            </div>
           </div>
           <div class="skill-item">
-            <span class="skill-name">JavaScript</span>
-            <span class="stars">★★★★<span class="stars-empty">☆</span></span>
+            <div class="skill-meta">
+              <span class="skill-name">JavaScript</span>
+            </div>
+            <div class="progress-bar">
+              <div class="progress-inner" data-level="80%"></div>
+            </div>
           </div>
           <div class="skill-item">
-            <span class="skill-name">PHP</span>
-            <span class="stars">★★★<span class="stars-empty">☆☆</span></span>
+            <div class="skill-meta">
+              <span class="skill-name">PHP</span>
+            </div>
+            <div class="progress-bar">
+              <div class="progress-inner" data-level="60%"></div>
+            </div>
           </div>
           <p class="description">マークアップ、動的なフロントエンド実装が対応可能です。</p>
         </div>
@@ -66,16 +87,28 @@
         <div class="skill-category">
           <h3>Design Tools</h3>
           <div class="skill-item">
-            <span class="skill-name">Photoshop</span>
-            <span class="stars">★★★★★</span>
+            <div class="skill-meta">
+              <span class="skill-name">Photoshop</span>
+            </div>
+            <div class="progress-bar">
+              <div class="progress-inner" data-level="100%"></div>
+            </div>
           </div>
           <div class="skill-item">
-            <span class="skill-name">Illustrator</span>
-            <span class="stars">★★★★<span class="stars-empty">☆</span></span>
+            <div class="skill-meta">
+              <span class="skill-name">Illustrator</span>
+            </div>
+            <div class="progress-bar">
+              <div class="progress-inner" data-level="80%"></div>
+            </div>
           </div>
           <div class="skill-item">
-            <span class="skill-name">Figma</span>
-            <span class="stars">★★★<span class="stars-empty">☆☆</span></span>
+            <div class="skill-meta">
+              <span class="skill-name">Figma</span>
+            </div>
+            <div class="progress-bar">
+              <div class="progress-inner" data-level="60%"></div>
+            </div>
           </div>
           <p class="description">バナーやUIデザインの作成、写真のレタッチなどが可能です。</p>
         </div>
@@ -83,20 +116,36 @@
         <div class="skill-category">
           <h3>Management & Marketing</h3>
           <div class="skill-item">
-            <span class="skill-name">WordPress</span>
-            <span class="stars">★★★★★</span>
+            <div class="skill-meta">
+              <span class="skill-name">WordPress</span>
+            </div>
+            <div class="progress-bar">
+              <div class="progress-inner" data-level="100%"></div>
+            </div>
           </div>
           <div class="skill-item">
-            <span class="skill-name">GitHub</span>
-            <span class="stars">★★★★<span class="stars-empty">☆</span></span>
+            <div class="skill-meta">
+              <span class="skill-name">GitHub</span>
+            </div>
+            <div class="progress-bar">
+              <div class="progress-inner" data-level="80%"></div>
+            </div>
           </div>
           <div class="skill-item">
-            <span class="skill-name">GA / GSC</span>
-            <span class="stars">★★★★<span class="stars-empty">☆</span></span>
+            <div class="skill-meta">
+              <span class="skill-name">GA / GSC</span>
+            </div>
+            <div class="progress-bar">
+              <div class="progress-inner" data-level="80%"></div>
+            </div>
           </div>
           <div class="skill-item">
-            <span class="skill-name">Google Ads</span>
-            <span class="stars">★★★<span class="stars-empty">☆☆</span></span>
+            <div class="skill-meta">
+              <span class="skill-name">Google Ads</span>
+            </div>
+            <div class="progress-bar">
+              <div class="progress-inner" data-level="60%"></div>
+            </div>
           </div>
           <p class="description">GitHubを用いたチーム開発、Wordpressを主としたCMSの構築、SEO対策まで一貫してサポートします。</p>
         </div>
@@ -107,6 +156,8 @@
   <section id="works" class="section">
     <div class="inner">
       <h2>Works</h2>
+      <p>その他の制作実績は<a href="https://docs.google.com/document/d/1JFjCG44Fvay3LZ3-d_xLTS4rG1wSWyfaK2t8WcfECK8/edit?tab=t.0"
+          target="_blank">こちら</a></p>
       <div class="works">
         <div class="work">
           <h3>LP</h3>
@@ -145,8 +196,6 @@
           <p>Photoshopで製作</p>
         </div>
       </div>
-      <p>その他の制作実績は<a href="https://docs.google.com/document/d/1JFjCG44Fvay3LZ3-d_xLTS4rG1wSWyfaK2t8WcfECK8/edit?tab=t.0"
-          target="_blank">こちら</a></p>
     </div>
   </section>
 
