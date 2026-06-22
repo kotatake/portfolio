@@ -1,35 +1,50 @@
 document.addEventListener('DOMContentLoaded', () => {
-  // すべてのゲージ（インナー）を取得
+  // 1. ゲージのアニメーション設定
   const progressBars = document.querySelectorAll('.progress-inner');
-
-  // Intersection Observerのオプション
-  const observerOptions = {
-    root: null, // ビューポートを基準にする
+  const barOptions = {
+    root: null,
     rootMargin: '0px',
-    threshold: 0.1 // 要素が10%でも画面に入ったら発火
+    threshold: 0.1
   };
 
-  // 交差時に実行するコールバック関数
   const animateProgress = (entries, observer) => {
     entries.forEach(entry => {
-      // 画面内に入ったか判定
       if (entry.isIntersecting) {
         const bar = entry.target;
-        // HTMLの data-level に設定した値を width に適用
         const level = bar.getAttribute('data-level');
         bar.style.width = level;
-
-        // 一度アニメーションしたら監視を終了する（スクロールで戻るたびに動かさないため）
         observer.unobserve(bar);
       }
     });
   };
 
-  // 監視インスタンスの生成
-  const observer = new IntersectionObserver(animateProgress, observerOptions);
+  const barObserver = new IntersectionObserver(animateProgress, barOptions);
+  progressBars.forEach(bar => barObserver.observe(bar));
 
-  // 各ゲージの監視を開始
-  progressBars.forEach(bar => {
-    observer.observe(bar);
+
+  // 2. スクロールフェードインのアニメーション設定
+  // フェードインさせたい要素を自動でターゲットに指定
+  const fadeTargets = document.querySelectorAll('#about > div, .skill-category, .work');
+  
+  fadeTargets.forEach(el => {
+    el.classList.add('fade-in-el'); // CSSの初期状態クラスを付与
   });
+
+  const fadeOptions = {
+    root: null,
+    rootMargin: '0px 0px -80px 0px', // 画面の下端より少し手前で発火させる
+    threshold: 0.1
+  };
+
+  const animateFade = (entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  };
+
+  const fadeObserver = new IntersectionObserver(animateFade, fadeOptions);
+  fadeTargets.forEach(target => fadeObserver.observe(target));
 });
