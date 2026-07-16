@@ -10,7 +10,9 @@ html {
 
 body {
   margin: 0;
-  font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+  font-family:
+    "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans",
+    Meiryo, sans-serif;
   color: #333;
   line-height: 1.8;
   overflow-x: hidden;
@@ -94,9 +96,15 @@ body {
   animation: mvTextMove 8s ease-in-out infinite alternate;
 }
 
-#about::before { content: "ABOUT"; }
-#skills::before { content: "SKILLS"; }
-#works::before { content: "WORKS"; }
+#about::before {
+  content: "ABOUT";
+}
+#skills::before {
+  content: "SKILLS";
+}
+#works::before {
+  content: "WORKS";
+}
 
 .mv .inner,
 .section .inner {
@@ -106,11 +114,13 @@ body {
 
 .mv {
   padding: 200px 0 120px;
-  background-image: 
+  background-image:
     radial-gradient(#d5d5d5 1px, transparent 1px),
     linear-gradient(45deg, #eaeaea 0.5px, transparent 0.5px);
   background-size: 40px 40px;
-  background-position: 0 0, 20px 20px;
+  background-position:
+    0 0,
+    20px 20px;
   animation: mvBgMove 10s linear infinite;
 }
 
@@ -121,9 +131,17 @@ body {
   left: -20%;
   width: 140%;
   height: 140%;
-  background: 
-    radial-gradient(circle at 30% 30%, rgba(59, 130, 246, 0.08), transparent 40%),
-    radial-gradient(circle at 70% 70%, rgba(212, 163, 115, 0.08), transparent 40%);
+  background:
+    radial-gradient(
+      circle at 30% 30%,
+      rgba(59, 130, 246, 0.08),
+      transparent 40%
+    ),
+    radial-gradient(
+      circle at 70% 70%,
+      rgba(212, 163, 115, 0.08),
+      transparent 40%
+    );
   z-index: -1;
   filter: blur(40px);
   animation: mvLightMove 12s ease-in-out infinite alternate;
@@ -168,9 +186,15 @@ body {
   position: relative;
 }
 
-#about h2::before { content: "01"; }
-#skills h2::before { content: "02"; }
-#works h2::before { content: "03"; }
+#about h2::before {
+  content: "01";
+}
+#skills h2::before {
+  content: "02";
+}
+#works h2::before {
+  content: "03";
+}
 
 .section h2::before {
   position: absolute;
@@ -192,7 +216,7 @@ body {
 
 .skill-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  grid-template-columns: repeat(2, 1fr);
   gap: 30px;
 }
 
@@ -202,7 +226,9 @@ body {
   border-radius: 16px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.02);
   border: 1px solid rgba(0, 0, 0, 0.02);
-  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  transition:
+    transform 0.4s ease,
+    box-shadow 0.4s ease;
 }
 
 .skill-category:hover {
@@ -241,7 +267,7 @@ body {
 
 .progress-inner {
   height: 100%;
-  width: 0; 
+  width: 0;
   background-color: #3b82f6;
   border-radius: 9999px;
   transition: width 1.5s cubic-bezier(0.25, 1, 0.5, 1);
@@ -278,7 +304,7 @@ body {
 
 .works {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  grid-template-columns: repeat(2, 1fr);
   gap: 30px;
 }
 
@@ -288,7 +314,9 @@ body {
   border-radius: 16px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.02);
   border: 1px solid rgba(0, 0, 0, 0.02);
-  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  transition:
+    transform 0.4s ease,
+    box-shadow 0.4s ease;
 }
 
 .work:hover {
@@ -341,7 +369,9 @@ body {
 .fade-in-el {
   opacity: 0;
   transform: translateY(30px);
-  transition: opacity 1s ease, transform 1s cubic-bezier(0.25, 1, 0.5, 1);
+  transition:
+    opacity 1s ease,
+    transform 1s cubic-bezier(0.25, 1, 0.5, 1);
 }
 
 .fade-in-el.is-visible {
@@ -351,10 +381,14 @@ body {
 
 @keyframes mvBgMove {
   0% {
-    background-position: 0 0, 20px 20px;
+    background-position:
+      0 0,
+      20px 20px;
   }
   100% {
-    background-position: 40px 40px, 60px 60px;
+    background-position:
+      40px 40px,
+      60px 60px;
   }
 }
 
