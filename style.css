@@ -379,6 +379,12 @@ body {
   transform: translateY(0);
 }
 
+@media screen and (max-width: 768px) {
+  .works, .skill-container {
+    display: block;
+  }
+}
+
 @keyframes mvBgMove {
   0% {
     background-position:
